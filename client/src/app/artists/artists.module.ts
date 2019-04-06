@@ -6,12 +6,14 @@ import { CommonModule } from '@angular/common';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { ArtistCardComponent } from './components/artist-card/artist-card.component';
 import { ArtistProfileComponent } from './components/artist-profile/artist-profile.component';
+import { FiltersBarComponent } from './components/filters-bar/filters-bar.component';
 
 @NgModule({
   declarations: [
     ArtistsComponent,
     ArtistCardComponent,
-    ArtistProfileComponent
+    ArtistProfileComponent,
+    FiltersBarComponent
   ],
   imports: [
     CommonModule,

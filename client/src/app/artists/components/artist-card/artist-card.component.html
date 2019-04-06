@@ -2,5 +2,7 @@
   class="artist-card"
   [style.backgroundImage]="'url(' + artist.cover + ')'"
 >
-  {{ artist.firstName }}
+  <div class="artist-card__name">
+    {{ artist.firstName }} {{ artist.lastName }}
+  </div>
 </div>
