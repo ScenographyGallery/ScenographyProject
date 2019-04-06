@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  padding: 30px;
+}
+
+.artists__list {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-auto-rows: 200px;
+}
+
+.artists__list-item {
+  cursor: pointer;
+}
