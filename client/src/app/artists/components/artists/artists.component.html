@@ -1,3 +1,12 @@
-<p>
-  artists works!
-</p>
+<section class="container">
+  <sc-filters-bar class="artists__filter"></sc-filters-bar>
+  
+  <div class="artists__list">
+    <sc-artist-card 
+      *ngFor="let artist of artists"
+      class="artists__list-item"
+      [artist]="artist"
+      [routerLink]="[artist.id]"
+    ></sc-artist-card>
+  </div>
+</section>
