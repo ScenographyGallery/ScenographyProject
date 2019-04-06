@@ -25,4 +25,8 @@ export class ArtistDataService {
   getArtists(): Observable<Artist[]> {
     return of(ARTISTS_MOCK);
   }
+
+  getArtist(id: string): Observable<Artist> {
+    return of(ARTISTS_MOCK[0]);
+  }
 }
