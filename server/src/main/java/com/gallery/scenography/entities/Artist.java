@@ -1,5 +1,6 @@
 package com.gallery.scenography.entities;
 
+import com.gallery.scenography.dto.ArtistDTO;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name = "artists")
-public class Artist {
+public class Artist extends ArtistDTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

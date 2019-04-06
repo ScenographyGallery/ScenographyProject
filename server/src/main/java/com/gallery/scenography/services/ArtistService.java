@@ -19,4 +19,16 @@ public class ArtistService {
         return artistRepository.findAll().stream().map(ArtistDTO::new).collect(Collectors.toList());
     }
 
+    public ArtistDTO getOneArtist(Long id) {
+        return new ArtistDTO(artistRepository.getOne(id));
+    }
+
+//    public void update(){
+//        artistRepository.
+//    }
+
+    public void remove(Long id){
+        artistRepository.deleteById(id);
+    }
+
 }
