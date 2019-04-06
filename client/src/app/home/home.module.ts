@@ -5,6 +5,7 @@ import {HomeComponent} from './home.component';
 import {HomeHeaderComponent} from './components/home-header/home-header.component';
 import {HomeAuthComponent} from './components/auth/home-auth.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HomeRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ]
 })
 export class HomeModule {}
