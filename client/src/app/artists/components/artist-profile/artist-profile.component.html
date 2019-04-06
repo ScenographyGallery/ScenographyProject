@@ -1,3 +1,12 @@
 <section *ngIf="artist" class="container">
-  <h1>{{ artist.firstName }} {{ artist.lastName }}</h1>
+  <div class="profile__main-info">
+    <div>
+      <img class="ava" [src]="artist.avatar" alt="">
+    </div>
+    <h1>{{ artist.firstName }} {{ artist.lastName }}</h1>
+    <sc-tags [tags]="artist.tags"></sc-tags>
+    <div>{{ artist.description }}</div>
+  </div>
+
+  <sc-projects [projects]="artist.projects"></sc-projects>
 </section>
