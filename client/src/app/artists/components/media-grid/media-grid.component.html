@@ -1,0 +1,9 @@
+<div 
+  class="grid__item"
+  [style.backgroundImage]="'url(' + item.image + ')'"
+  *ngFor="let item of gridItems"
+>
+  <div class="grid__item-label">
+    {{ item.name }}
+  </div>
+</div>
