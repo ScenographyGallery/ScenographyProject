@@ -218,43 +218,41 @@
           border-color: darken($gray, 30%)
         }
       }
-      &_buttons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 35px;
-        &-forgot {
-          font-family: $ff;
-          letter-spacing: .1rem;
-          color: $gray;
-          text-decoration: underline;
-          transition: color .2s ease-in-out;
-          &:hover {
-            color: darken($gray, 10%)
-          }
+    }
+    &_buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 35px;
+      &-forgot {
+        font-family: $ff;
+        letter-spacing: .1rem;
+        color: $gray;
+        text-decoration: underline;
+        transition: color .2s ease-in-out;
+        &:hover {
+          color: darken($gray, 10%)
         }
-        &-action {
-          background-color: $salmon;
-          border-radius: $bdrds;
-          padding: 10px 35px;
-          font-size: 1rem;
-          font-family: $ff;
-          font-weight: $ff-light;
-          color: $white;
-          text-transform: uppercase;
-          letter-spacing: .1rem;
-          transition: background-color .2s ease-in-out;
-          &:hover {
-            background-color: darken($salmon, 10%);
-          }
+      }
+      &-action {
+        background-color: $salmon;
+        border-radius: $bdrds;
+        padding: 10px 35px;
+        font-size: 1rem;
+        font-family: $ff;
+        font-weight: $ff-light;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        transition: background-color .2s ease-in-out;
+
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: darken($salmon, 10%);
         }
       }
     }
-
-
-
-
-
   }
 
 
