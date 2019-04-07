@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ArtistsRoutingModule } from './artists-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -24,6 +25,7 @@ import { MediaGridComponent } from './components/media-grid/media-grid.component
   imports: [
     CommonModule,
     ArtistsRoutingModule,
+    HttpClientModule
   ]
 })
 export class ArtistsModule { }
