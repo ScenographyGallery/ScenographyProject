@@ -1,5 +1,6 @@
 :host {
   display: block;
+  position: relative;
 }
 
 .artist-card {
@@ -7,11 +8,14 @@
   width: 100%;
   position: relative;
   border-radius: 10px;
-}
+  transition: all 1000ms;
+  opacity: 0;
+  position: absolute;
+  background-size: cover;
 
-.artist-card:hover .artist-card__name {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  &--visible {
+    opacity: 1;
+  }
 }
 
 .artist-card__name {
@@ -26,4 +30,9 @@
   color: #fff;
   background-color: rgba($color: #000000, $alpha: .5);
   border-radius: 10px;
+
+  &--visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }

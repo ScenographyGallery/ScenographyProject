@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Artist } from 'src/app/models/artist';
 
 @Component({
@@ -8,6 +8,18 @@ import { Artist } from 'src/app/models/artist';
 })
 export class ArtistCardComponent implements OnInit {
   @Input() artist: Artist;
+
+  isBeingHovered = false;
+
+  @HostListener('mouseover')
+  onMouseOver() {
+    this.isBeingHovered = true;
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.isBeingHovered = false;
+  }
 
   constructor() { }
 
