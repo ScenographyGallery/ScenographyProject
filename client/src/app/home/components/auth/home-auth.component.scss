@@ -108,7 +108,7 @@
   .user {
     height: 100vh;
     width: 100%;
-    background: url('https://goo.gl/YRxqs1') no-repeat center;
+    background: url('../../../../assets/images/aboutcover.jpg') no-repeat center;
     background-size: cover;
     &_options-container {
       position: relative;
@@ -119,8 +119,9 @@
     &_options-text {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      background-color: $smoky-black;
+      width: 84%;
+      margin: 0 auto;
+      background-color: rgba(34, 34, 34, 0.35);
       border-radius: $bdrds;
     }
   }
@@ -132,7 +133,7 @@
   .user_options-registered,
   .user_options-unregistered {
     width: 50%;
-    padding: 75px 45px;
+    padding: 40px 45px;
 
     color: $white;
     font-weight: $ff-light
@@ -145,6 +146,7 @@
     font-weight: normal;
     font-size: 48px;
     line-height: normal;
+    //line-height: 1.1em;
   }
   .user_unregistered-text,
   .user_registered-text {
@@ -159,7 +161,7 @@
     margin-top: 30px;
     border: 1px solid $gray;
     border-radius: 20px;
-    padding: 10px 30px;
+    padding: 7px 30px;
 
     color: #000000;
     text-transform: uppercase;
@@ -181,11 +183,12 @@
      */
   .user_options-forms {
     position: absolute;
-    top: 69%;
-    left: 30px;
 
-    width: calc(50% - 30px);
-    min-height: 420px;
+    top: 70.5%;
+
+    left: 92px;
+    width: calc(50% - 76px);
+    min-height: 325px;
     background-color: $white;
     border-radius: $bdrds;
     box-shadow: 2px 0 15px rgba($black, .25);
@@ -193,6 +196,7 @@
 
     transform: translate3d(100%, -50%, 0);
     transition: transform .4s ease-in-out;
+
   }
 
   .user_forms-login {
@@ -200,7 +204,7 @@
   }
   .forms {
     &_title {
-      margin-bottom: 45px;
+      margin-bottom: 28px;
 
       text-transform: uppercase;
       color: $salmon;
@@ -210,6 +214,7 @@
       font-weight: normal;
       font-size: 48px;
       line-height: normal;
+
     }
     &_field {
       &:not(:last-of-type) {
@@ -229,6 +234,12 @@
         &:focus {
           border-color: darken($gray, 30%)
         }
+      }
+      .input.is-active, .input.is-focused, .input:active, .input:focus, .textarea.is-active, .textarea.is-focused, .textarea:active, .textarea:focus {
+        /* border-color: #08E8DE; */
+        /* border-radius: 6px; */
+        box-shadow: 0 0 0 0.125em rgba(8, 232, 222, .3);
+        border-color: transparent;
       }
     }
     &_buttons {
@@ -255,7 +266,7 @@
         font-size: 1rem;
         font-family: $ff;
         font-weight: $ff-light;
-        color: $white;
+        color: #000;
         text-transform: uppercase;
         letter-spacing: .1rem;
         transition: background-color .2s ease-in-out;
@@ -278,7 +289,7 @@
   .user_forms-signup,
   .user_forms-login {
     position: absolute;
-    top: 70px;
+    top: 33px;
     left: 40px;
 
     width: calc(100% - 80px);
@@ -350,3 +361,56 @@
   //padding: 50px 45px
 
 }
+
+//
+//.button_hb{
+//  padding: 1.5rem 3rem;
+//  text-transform: uppercase;
+//  color: var(--uiButtonBgColorHover);
+//
+//  border-width: 2px;
+//  border-style: solid;
+//  border-color: var(--uiButtonBgColorHover);
+//}
+//
+//.button_hb{
+//  --uiButtonBgColorHover: var(--buttondBgColorHover);
+//  position: relative;
+//  overflow: hidden;
+//  transition: color .5s ease-out;
+//}
+//
+//.button_hb:before{
+//  content: "";
+//  background-color: var(--uiButtonBgColorHover);
+//}
+//
+//.button_hb:focus{
+//  outline: none;
+//}
+//
+//.button_hb .button__icon, .button_hb:not(.button_hidden-text) .button__label{
+//  position: relative;
+//  z-index: 2;
+//}
+//
+//
+//
+//.button_hb-type2:before{
+//  width: 0;
+//  height: 0;
+//  padding: 50%;
+//  border-radius: 50%;
+//
+//  position: absolute;
+//  left: 50%;
+//  top: 50%;
+//
+//  transform: translate3d(-50%, -50%, 0) scale(0);
+//  transition: transform .15s ease-out;
+//}
+//
+//.button_hb-type2:hover:before, .button_hb-type2:focus:before{
+//  transition-duration: .3s;
+//  transform: translate3d(-50%, -50%, 0) scale(1.5);
+//}

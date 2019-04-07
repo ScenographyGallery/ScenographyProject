@@ -4,7 +4,23 @@
   background: transparent;
 }
 
+.navbar-end {
+  padding: 2em 0;
+}
+
 .navbar-item, .navbar-link {
   color: #fff;
   cursor: pointer;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin: 0 1em;
+
+  img {
+    max-height: 6rem;
+  }
 }
