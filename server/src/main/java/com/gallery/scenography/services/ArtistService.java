@@ -23,12 +23,25 @@ public class ArtistService {
         return new ArtistDTO(artistRepository.getOne(id));
     }
 
-//    public void update(){
-//        artistRepository.
-//    }
-
     public void remove(Long id){
         artistRepository.deleteById(id);
     }
+
+    public void put(Artist artist){
+        artistRepository.save(artist);
+    }
+
+    //TODO redo all method
+//    public Artist update(Long id, Artist artist) {
+//        return artistRepository.findById(id)
+//            .map(employee -> {
+//                artist.setId(id);
+//                return artistRepository.save(artist);
+//            })
+//            .orElseGet(() -> {
+//                artist.setId(id);
+//                return artistRepository.save(artist);
+//            });
+//    }
 
 }
