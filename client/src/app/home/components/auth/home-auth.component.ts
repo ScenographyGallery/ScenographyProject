@@ -1,9 +1,8 @@
-import {Component, ElementRef, HostListener, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {FormCreatorService} from '../../shared/services/form-creator.service';
 import {AuthService} from '../../shared/services/auth.service';
 import {DOCUMENT} from '@angular/common';
-import { WINDOW } from './window.service';
 
 @Component({
   selector: 'sc-auth',
@@ -22,33 +21,19 @@ export class HomeAuthComponent implements OnInit {
   isAuthFormSubmitted: boolean;
   isSignupFormSubmitted: boolean;
 
-  public navIsFixed = false;
-
   constructor(
     private formCreatorService: FormCreatorService,
     private renderer: Renderer2,
     private authService: AuthService,
     @Inject(DOCUMENT) private document: Document,
-    // @Inject(WINDOW) private window,
   ) { }
 
   ngOnInit() {
     // TODO: forgot password
-    // this.y = window.pageYOffset;
   }
 
   get login() { return this.loginForm.controls; }
   get signup() { return this.signupForm.controls; }
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    // const num = this.window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
-    // if (num > 100) {
-    //   this.navIsFixed = true;
-    // } else if (this.navIsFixed && num < 10) {
-    //   this.navIsFixed = false;
-    // }
-  }
 
   handleLoginAuth() {
     this.isAuthFormSubmitted = true;
