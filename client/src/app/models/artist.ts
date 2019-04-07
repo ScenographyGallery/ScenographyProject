@@ -9,4 +9,5 @@ export interface Artist {
   tags?: string[];
   projects?: Project[];
   avatar?: string;
+  specialization: string;
 }

@@ -11,8 +11,13 @@
  ></div>
   
 <div 
-  class="artist-card__name accent-name"
-  [class.artist-card__name--visible]="isBeingHovered"
+  class="artist-card__name-wrapper"
+  [class.artist-card__name-wrapper--visible]="isBeingHovered"
 >
-  {{ artist.firstName }} {{ artist.lastName }}
+  <div class="artist-card__name accent-name">
+    {{ artist.firstName }} {{ artist.lastName }}
+  </div>
+  <div class="artist-card__specialization">
+    {{ artist.specialization }}
+  </div>
 </div>
