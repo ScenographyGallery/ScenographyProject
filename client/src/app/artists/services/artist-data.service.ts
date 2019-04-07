@@ -13,7 +13,7 @@ const PROJECTS_MOCK: Project[] = [
 const ARTISTS_MOCK = [
   { 
     id: '1',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+    description: "Scenograph Lesya Ukrainka National Academic Theater Lviv",
     firstName: 'Roman', 
     lastName: 'Yavoriv', 
     tags: ['light', 'beauty', 'flovers'],

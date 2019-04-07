@@ -1,8 +1,8 @@
 :host {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-auto-rows: 250px;
 }
   
   .grid__item {
