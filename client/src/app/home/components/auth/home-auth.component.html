@@ -44,7 +44,7 @@
               </div>
             </fieldset>
             <div class="forms_buttons">
-              <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+<!--              <button type="button" class="forms_buttons-forgot">Forgot password?</button>-->
               <input type="submit" value="Log In" class="forms_buttons-action">
             </div>
           </form>
@@ -53,14 +53,14 @@
           <h2 class="forms_title">Sign Up</h2>
           <form class="forms_form" [formGroup]="signupForm" (ngSubmit)="handleSignupFormAuth()">
             <fieldset class="forms_fieldset">
-              <div class="forms_field">
-                <input class="input forms_field-input"
-                       required
-                       type="text"
-                       placeholder="Full Name"
-                       [ngStyle]="(isSignupFormSubmitted && signup.name.errors) && {'border-color': '#f44336'}"
-                       formControlName="name"/>
-              </div>
+<!--              <div class="forms_field">-->
+<!--                <input class="input forms_field-input"-->
+<!--                       required-->
+<!--                       type="text"-->
+<!--                       placeholder="Full Name"-->
+<!--                       [ngStyle]="(isSignupFormSubmitted && signup.name.errors) && {'border-color': '#f44336'}"-->
+<!--                       formControlName="name"/>-->
+<!--              </div>-->
               <div class="forms_field">
                 <input class="input forms_field-input"
                        required

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeHeaderComponent implements OnInit {
 
+  isArrowClicked: boolean;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleArrowClick() {
+    this.isArrowClicked = true;
   }
 
 }

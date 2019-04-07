@@ -7,10 +7,25 @@
   </div>
   <div class="home-header-overlay"></div>
   <div class="home-header-content">
-    <h1>Welcome to Scenography</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!
+    <h1>Gallery of
+      Scenography</h1>
+    <p>
+      Text about NEW gallery platform.
+      This is good web-site for your  communication with other artists in theatre
     </p>
-    <a class="btn" href="home#auth">Join Us</a>
+  </div>
+  <div class="home-header-pointer">
+    <a *ngIf="!isArrowClicked"
+       href="home#auth"
+       class="arrow bounce"
+       (click)="handleArrowClick()">
+      <svg width="65"
+           height="34"
+           viewBox="0 0 65 34"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L32.5 32.5L64 1" stroke="white"/>
+      </svg>
+    </a>
   </div>
 </header>
