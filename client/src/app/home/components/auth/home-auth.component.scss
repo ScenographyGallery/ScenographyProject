@@ -9,7 +9,8 @@
   $white: #fff;
   $black: #000;
   $gray: #ccc;
-  $salmon: #e8716d;
+  // primary
+  $salmon: #000;
   $smoky-black: rgba(#222222, .85);
 
   $ff: 'Montserrat', sans-serif;
@@ -140,27 +141,35 @@
   .user_registered-title,
   .user_unregistered-title {
     margin-bottom: 15px;
-    font-size: 1.66rem;
-    line-height: 1em
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: normal;
   }
   .user_unregistered-text,
   .user_registered-text {
-    font-size: .83rem;
-    line-height: 1.4em
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
   }
   .user_registered-login,
   .user_unregistered-signup {
+    background-color: #BDBDBD;
     margin-top: 30px;
     border: 1px solid $gray;
-    border-radius: $bdrds;
+    border-radius: 20px;
     padding: 10px 30px;
 
-    color: $white;
+    color: #000000;
     text-transform: uppercase;
-    line-height: 1em;
-    letter-spacing: .2rem;
-
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.1em;
     &:hover {
       color: $smoky-black;
       background-color: $gray
@@ -193,19 +202,21 @@
     &_title {
       margin-bottom: 45px;
 
-      font-size: 1.5rem;
-      font-weight: $ff-medium;
-      line-height: 1em;
       text-transform: uppercase;
       color: $salmon;
-      letter-spacing: .1rem
+      letter-spacing: .1rem;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: normal;
     }
     &_field {
       &:not(:last-of-type) {
         margin-bottom: 20px
       }
       &_field-input {
-        width: 100%;
+        //width: 100%;
         border-bottom: 1px solid $gray;
         padding: 6px 20px 6px 0;
         font-family: $ff;
@@ -214,6 +225,7 @@
         color: darken($gray, 30%);
         letter-spacing: .1rem;
         transition: border-color .2s ease-in-out;
+
         &:focus {
           border-color: darken($gray, 30%)
         }
@@ -235,9 +247,11 @@
         }
       }
       &-action {
-        background-color: $salmon;
-        border-radius: $bdrds;
-        padding: 10px 35px;
+        background-color: #08E8DE;
+
+        //background-color: $salmon;
+        border-radius: 20px;
+        padding: 10px 15px;
         font-size: 1rem;
         font-family: $ff;
         font-weight: $ff-light;
@@ -249,12 +263,17 @@
         border: none;
         cursor: pointer;
         &:hover {
-          background-color: darken($salmon, 10%);
+          background-color: darken(#08E8DE, 10%);
         }
       }
     }
   }
 
+  .input {
+    background: #F2F2F2;
+    border-radius: 20px;
+    width: 15em;
+  }
 
   .user_forms-signup,
   .user_forms-login {
@@ -272,7 +291,7 @@
   .user_forms-signup {
     transform: translate3d(120px, 0, 0);
     .forms_buttons {
-      justify-content: flex-end
+      justify-content: flex-start;
     }
   }
 
