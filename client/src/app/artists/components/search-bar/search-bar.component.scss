@@ -1,0 +1,35 @@
+.search-bar {
+  margin: 0 auto;
+  width: 38%;
+  .search__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 5vw;
+    line-height: 1;
+    display: inline-block;
+    box-sizing: border-box;
+    border-bottom: 4px solid;
+    outline: 0;
+    color: #fff;
+    opacity: .3;
+    font-weight: 200;
+    &::placeholder {
+      color: #fff;
+      opacity: .8;
+      //font-family: 'Montserrat', sans-serif;
+
+      font-style: normal;
+      font-weight: 200;
+      line-height: normal;
+      text-align: center;
+    }
+  }
+
+  .search__input {
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+}

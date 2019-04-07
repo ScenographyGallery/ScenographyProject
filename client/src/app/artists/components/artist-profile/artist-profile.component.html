@@ -1,3 +1,13 @@
-<section *ngIf="artist" class="container">
-  <h1>{{ artist.firstName }} {{ artist.lastName }}</h1>
+<section *ngIf="artist" class="container has-text-white-ter">
+  <div class="profile__main-info">
+    <div class="profile__ava-wrapper">
+      <img class="ava" [src]="artist.avatar" alt="artist">
+    </div>
+    <h1 class="profile__name accent-name">{{ artist.firstName }} {{ artist.lastName }}</h1>
+    <div class="profile__specialization">{{ artist.specialization }}</div>
+    <sc-tags class="m-b-2" [tags]="artist.tags"></sc-tags>
+    <div>{{ artist.description }}</div>
+  </div>
+
+  <sc-projects [projects]="artist.projects"></sc-projects>
 </section>

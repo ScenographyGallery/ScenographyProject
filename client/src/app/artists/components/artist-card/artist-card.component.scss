@@ -1,5 +1,6 @@
 :host {
   display: block;
+  position: relative;
 }
 
 .artist-card {
@@ -7,14 +8,17 @@
   width: 100%;
   position: relative;
   border-radius: 10px;
+  transition: all 1000ms;
+  opacity: 0;
+  position: absolute;
+  background-size: cover;
+
+  &--visible {
+    opacity: 1;
+  }
 }
 
-.artist-card:hover .artist-card__name {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.artist-card__name {
+.artist-card__name-wrapper {
   opacity: 0;
   transform: scale(0);
   transition: all 400ms;
@@ -26,4 +30,19 @@
   color: #fff;
   background-color: rgba($color: #000000, $alpha: .5);
   border-radius: 10px;
+  text-align: center;
+
+  &--visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.artist-card__name {
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.artist-card__specialization {
+  font-size: .8rem;
 }

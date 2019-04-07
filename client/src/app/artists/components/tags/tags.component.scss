@@ -1,0 +1,7 @@
+:host {
+  display: inline-flex;
+}
+
+.tag:not(:last-child) {
+  margin-right: 10px;
+}

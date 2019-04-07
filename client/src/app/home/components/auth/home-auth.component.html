@@ -5,16 +5,16 @@
         <div class="user_options-unregistered">
           <h2 class="user_unregistered-title">Don't have an account?</h2>
           <p class="user_unregistered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
-          <button class="user_unregistered-signup"
+          <button class="user_unregistered-signup button button_hb button_hb-type2"
                   id="signup-button"
                   (click)="handleSignupForm()">
             Sign up</button>
         </div>
 
         <div class="user_options-registered">
-          <h2 class="user_registered-title">Have an account?</h2>
+          <h2 class="user_registered-title">Have an <br> account?</h2>
           <p class="user_registered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
-          <button class="user_registered-login"
+          <button class="user_registered-login button button_hb button_hb-type2"
                   id="login-button"
                   (click)="handleLoginForm()">
             Login</button>
@@ -44,7 +44,7 @@
               </div>
             </fieldset>
             <div class="forms_buttons">
-              <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+<!--              <button type="button" class="forms_buttons-forgot">Forgot password?</button>-->
               <input type="submit" value="Log In" class="forms_buttons-action">
             </div>
           </form>
@@ -53,14 +53,14 @@
           <h2 class="forms_title">Sign Up</h2>
           <form class="forms_form" [formGroup]="signupForm" (ngSubmit)="handleSignupFormAuth()">
             <fieldset class="forms_fieldset">
-              <div class="forms_field">
-                <input class="input forms_field-input"
-                       required
-                       type="text"
-                       placeholder="Full Name"
-                       [ngStyle]="(isSignupFormSubmitted && signup.name.errors) && {'border-color': '#f44336'}"
-                       formControlName="name"/>
-              </div>
+<!--              <div class="forms_field">-->
+<!--                <input class="input forms_field-input"-->
+<!--                       required-->
+<!--                       type="text"-->
+<!--                       placeholder="Full Name"-->
+<!--                       [ngStyle]="(isSignupFormSubmitted && signup.name.errors) && {'border-color': '#f44336'}"-->
+<!--                       formControlName="name"/>-->
+<!--              </div>-->
               <div class="forms_field">
                 <input class="input forms_field-input"
                        required

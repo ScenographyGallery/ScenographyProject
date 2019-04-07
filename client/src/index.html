@@ -5,10 +5,29 @@
   <title>Scenography</title>
   <base href="/">
 
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .loading {
+      background-color: #000;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <sc-root></sc-root>
+  <sc-root>
+    <div class="loading">
+      <img src="/assets/images/loading.gif" alt="daw">
+    </div>
+  </sc-root>
 </body>
 </html>

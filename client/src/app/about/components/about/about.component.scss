@@ -1,0 +1,82 @@
+:host {
+	display: block;
+	background-color: rgb(30, 30, 30);
+	min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.about__hero-section {
+  height: 100vh;
+  min-height: 700px;
+  width: 100%;
+  background-image: url('./../../../../assets/images/about_hero.jpg');
+  background-size: cover;
+  position: relative;
+  padding-top: 17em;
+  margin: 0 auto;
+}
+
+.about-overlay {
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background: #000;
+  opacity: .7;
+}
+
+h1 {
+  width: 100%;
+  position: absolute;
+  z-index:2;
+  font-style: normal;
+  font-size: 96px;
+  text-align: center;
+  color: #fff;
+  line-height: 1em;
+  margin-bottom: 37px;
+}
+
+.about__description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  padding: 100px;
+}
+
+.about-pointer {
+  z-index:2;
+  text-align: center;
+  display: block;
+  margin-top: 24em;
+  position: absolute;
+  width: 100%;
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    margin-left:-20px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+  }
+
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+
+}

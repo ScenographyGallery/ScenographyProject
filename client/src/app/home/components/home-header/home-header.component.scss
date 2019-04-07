@@ -2,6 +2,7 @@
 .home-header {
   height:100vh;
   display:flex;
+  flex-direction: column;
   align-items:center;
   color:#fff;
   &-video {
@@ -23,28 +24,67 @@
     left:0;
     width:100vw;
     z-index:1;
-    background:#225470;
-    opacity:0.85;
+    background: #000;
+    opacity: .7;
   }
   &-content {
     z-index:2;
     text-align: center;
-    padding: 0 12em;
+    padding: 16em 17em 0em 17em;
     h1 {
-      font-size:50px;
-      margin-bottom:0;
+      font-style: normal;
+      font-size: 96px;
+      text-align: center;
+      color: #fff;
+      line-height: 1em;
+      margin-bottom: 37px;
     }
     p {
-      font-size:1.5rem;
-      display:block;
-      padding-bottom:2rem;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: normal;
+      text-align: center;
+      color: #fff;
     }
-    .btn {
-      background: #34b3a0;
-      color:#fff;
-      font-size:1.2rem;
-      padding: 1rem 2rem;
-      text-decoration: none;
+  }
+  &-pointer {
+    z-index:2;
+    text-align: center;
+    margin-top: 10em;
+    display: block;
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+
+    body {
+      background: black;
+    }
+
+    .arrow {
+      position: absolute;
+      //bottom: 0;
+      //left: 50%;
+      margin-left:-20px;
+      width: 40px;
+      height: 40px;
+      //background-image: url("data:image/svg+xml, %3Csvg width='65' height='34' viewBox='0 0 65 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L32.5 32.5L64 1' stroke='white'/%3E%3C/svg%3E");;
+      background-size: contain;
+    }
+
+    .bounce {
+      animation: bounce 2s infinite;
     }
   }
 }

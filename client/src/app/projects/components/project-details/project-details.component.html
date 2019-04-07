@@ -1,0 +1,17 @@
+<section *ngIf="project" class="container">
+  <section class="project__artist-row">
+    <div>
+      <img class="ava ava--sm" [src]="project.artistAva" alt="artist">
+    </div>
+    <span>{{ project.artistFirstName }} {{ project.artistLastName }}</span>
+  </section>
+  
+  <h1>{{ project.name }}</h1>
+  
+  <p class="project__description">{{ project.description }}</p>
+  
+  <!-- PROJECT IMAGES -->
+  <div class="project__image" *ngFor="let image of project.images">
+    <img [src]="image" [alt]="project.name">
+  </div>
+</section>

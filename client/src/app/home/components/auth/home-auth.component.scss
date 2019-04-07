@@ -9,7 +9,8 @@
   $white: #fff;
   $black: #000;
   $gray: #ccc;
-  $salmon: #e8716d;
+  // primary
+  $salmon: #000;
   $smoky-black: rgba(#222222, .85);
 
   $ff: 'Montserrat', sans-serif;
@@ -107,7 +108,7 @@
   .user {
     height: 100vh;
     width: 100%;
-    background: url('https://goo.gl/YRxqs1') no-repeat center;
+    background: url('../../../../assets/images/aboutcover.jpg') no-repeat center;
     background-size: cover;
     &_options-container {
       position: relative;
@@ -118,8 +119,9 @@
     &_options-text {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      background-color: $smoky-black;
+      width: 84%;
+      margin: 0 auto;
+      background-color: rgba(34, 34, 34, 0.35);
       border-radius: $bdrds;
     }
   }
@@ -131,7 +133,7 @@
   .user_options-registered,
   .user_options-unregistered {
     width: 50%;
-    padding: 75px 45px;
+    padding: 40px 45px;
 
     color: $white;
     font-weight: $ff-light
@@ -140,27 +142,36 @@
   .user_registered-title,
   .user_unregistered-title {
     margin-bottom: 15px;
-    font-size: 1.66rem;
-    line-height: 1em
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: normal;
+    //line-height: 1.1em;
   }
   .user_unregistered-text,
   .user_registered-text {
-    font-size: .83rem;
-    line-height: 1.4em
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
   }
   .user_registered-login,
   .user_unregistered-signup {
+    background-color: #BDBDBD;
     margin-top: 30px;
     border: 1px solid $gray;
-    border-radius: $bdrds;
-    padding: 10px 30px;
+    border-radius: 20px;
+    padding: 7px 30px;
 
-    color: $white;
+    color: #000000;
     text-transform: uppercase;
-    line-height: 1em;
-    letter-spacing: .2rem;
-
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.1em;
     &:hover {
       color: $smoky-black;
       background-color: $gray
@@ -172,11 +183,12 @@
      */
   .user_options-forms {
     position: absolute;
-    top: 69%;
-    left: 30px;
 
-    width: calc(50% - 30px);
-    min-height: 420px;
+    top: 70.5%;
+
+    left: 92px;
+    width: calc(50% - 76px);
+    min-height: 325px;
     background-color: $white;
     border-radius: $bdrds;
     box-shadow: 2px 0 15px rgba($black, .25);
@@ -184,6 +196,7 @@
 
     transform: translate3d(100%, -50%, 0);
     transition: transform .4s ease-in-out;
+
   }
 
   .user_forms-login {
@@ -191,21 +204,24 @@
   }
   .forms {
     &_title {
-      margin-bottom: 45px;
+      margin-bottom: 28px;
 
-      font-size: 1.5rem;
-      font-weight: $ff-medium;
-      line-height: 1em;
       text-transform: uppercase;
       color: $salmon;
-      letter-spacing: .1rem
+      letter-spacing: .1rem;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: normal;
+
     }
     &_field {
       &:not(:last-of-type) {
         margin-bottom: 20px
       }
       &_field-input {
-        width: 100%;
+        //width: 100%;
         border-bottom: 1px solid $gray;
         padding: 6px 20px 6px 0;
         font-family: $ff;
@@ -214,9 +230,16 @@
         color: darken($gray, 30%);
         letter-spacing: .1rem;
         transition: border-color .2s ease-in-out;
+
         &:focus {
           border-color: darken($gray, 30%)
         }
+      }
+      .input.is-active, .input.is-focused, .input:active, .input:focus, .textarea.is-active, .textarea.is-focused, .textarea:active, .textarea:focus {
+        /* border-color: #08E8DE; */
+        /* border-radius: 6px; */
+        box-shadow: 0 0 0 0.125em rgba(8, 232, 222, .3);
+        border-color: transparent;
       }
     }
     &_buttons {
@@ -235,13 +258,15 @@
         }
       }
       &-action {
-        background-color: $salmon;
-        border-radius: $bdrds;
-        padding: 10px 35px;
+        background-color: #08E8DE;
+
+        //background-color: $salmon;
+        border-radius: 20px;
+        padding: 10px 15px;
         font-size: 1rem;
         font-family: $ff;
         font-weight: $ff-light;
-        color: $white;
+        color: #000;
         text-transform: uppercase;
         letter-spacing: .1rem;
         transition: background-color .2s ease-in-out;
@@ -249,17 +274,22 @@
         border: none;
         cursor: pointer;
         &:hover {
-          background-color: darken($salmon, 10%);
+          background-color: darken(#08E8DE, 10%);
         }
       }
     }
   }
 
+  .input {
+    background: #F2F2F2;
+    border-radius: 20px;
+    width: 15em;
+  }
 
   .user_forms-signup,
   .user_forms-login {
     position: absolute;
-    top: 70px;
+    top: 33px;
     left: 40px;
 
     width: calc(100% - 80px);
@@ -272,7 +302,7 @@
   .user_forms-signup {
     transform: translate3d(120px, 0, 0);
     .forms_buttons {
-      justify-content: flex-end
+      justify-content: flex-start;
     }
   }
 
@@ -331,3 +361,56 @@
   //padding: 50px 45px
 
 }
+
+//
+//.button_hb{
+//  padding: 1.5rem 3rem;
+//  text-transform: uppercase;
+//  color: var(--uiButtonBgColorHover);
+//
+//  border-width: 2px;
+//  border-style: solid;
+//  border-color: var(--uiButtonBgColorHover);
+//}
+//
+//.button_hb{
+//  --uiButtonBgColorHover: var(--buttondBgColorHover);
+//  position: relative;
+//  overflow: hidden;
+//  transition: color .5s ease-out;
+//}
+//
+//.button_hb:before{
+//  content: "";
+//  background-color: var(--uiButtonBgColorHover);
+//}
+//
+//.button_hb:focus{
+//  outline: none;
+//}
+//
+//.button_hb .button__icon, .button_hb:not(.button_hidden-text) .button__label{
+//  position: relative;
+//  z-index: 2;
+//}
+//
+//
+//
+//.button_hb-type2:before{
+//  width: 0;
+//  height: 0;
+//  padding: 50%;
+//  border-radius: 50%;
+//
+//  position: absolute;
+//  left: 50%;
+//  top: 50%;
+//
+//  transform: translate3d(-50%, -50%, 0) scale(0);
+//  transition: transform .15s ease-out;
+//}
+//
+//.button_hb-type2:hover:before, .button_hb-type2:focus:before{
+//  transition-duration: .3s;
+//  transform: translate3d(-50%, -50%, 0) scale(1.5);
+//}

@@ -1,7 +1,8 @@
-import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {FormCreatorService} from '../../shared/services/form-creator.service';
 import {AuthService} from '../../shared/services/auth.service';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'sc-auth',
@@ -24,6 +25,7 @@ export class HomeAuthComponent implements OnInit {
     private formCreatorService: FormCreatorService,
     private renderer: Renderer2,
     private authService: AuthService,
+    @Inject(DOCUMENT) private document: Document,
   ) { }
 
   ngOnInit() {

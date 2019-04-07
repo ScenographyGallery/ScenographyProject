@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  padding: 50px;
+  //background-color: #08e8de;
+  background: url('../../../../assets/images/contact.png') no-repeat center;
+  position: relative;
+  height: 100vh;
+}
+
+.contact__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__items {
+  z-index: 100;
+  margin-top: 11em;
+}
+
+.contact__item {
+  margin-bottom: 15px;
+
+  h3 {
+    opacity: .8;;
+  }
+}
+
+.contact__item-value {
+  font-weight: bold;
+}
+
+.about__img-wrapper {
+  z-index: 100;
+  margin-top: 11em;
+  flex-basis: 400px;
+  max-width: 400px;
+  margin-left: 100px;
+}
+
+.about-overlay {
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background: #000;
+  opacity: .7;
+}
+
+

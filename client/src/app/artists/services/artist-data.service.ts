@@ -1,32 +1,24 @@
+import { HttpClient } from '@angular/common/http';
 import { Artist } from './../../models/artist';
 import { Injectable } from '@angular/core';
-import { of, Observable } from 'rxjs';
-
-const ARTISTS_MOCK = [
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-  { id: '1', firstName: 'Roman', lastName: 'Yavoriv', cover: 'https://images.unsplash.com/photo-1554384919-3c159e9023be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80' },
-]
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArtistDataService {
+  baseUrl = environment.baseUrl;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) { }
 
   getArtists(): Observable<Artist[]> {
-    return of(ARTISTS_MOCK);
+    return this.http.get<Artist[]>(`${this.baseUrl}artists`);
   }
 
   getArtist(id: string): Observable<Artist> {
-    return of(ARTISTS_MOCK[0]);
+    return this.http.get<Artist>(`${this.baseUrl}artists/${id}`);
   }
 }
