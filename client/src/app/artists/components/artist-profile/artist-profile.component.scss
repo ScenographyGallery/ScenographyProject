@@ -2,7 +2,7 @@
   display: block;
   padding-bottom: 2.5rem;
   padding-top: 5.5rem;
-  background-color: #000;
+  background-color: rgb(30, 30, 30);
   min-height: 100vh;
 }
 
@@ -10,4 +10,10 @@
   width: 400px;
   margin: 0 auto 30px;
   text-align: center;  
+}
+
+.profile__specialization,
+.profile__name,
+.profile__ava-wrapper {
+  margin-bottom: 20px;
 }
