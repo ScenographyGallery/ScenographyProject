@@ -1,15 +1,10 @@
 <form class="filters-bar">
-  <div class="filters-bar"></div>
-  <input class="input" type="text" placeholder="Search Artist">
-  <div class="select">
-    <select>
-      <option>Category</option>
-      <option>Scene</option>
-      <option>Costume</option>
-      <option>Light</option>
-    </select>
+  <div class="filters-bar-category">
+    <div class="filters-bar-category__item" (click)="handleCustomSelect()" [ngStyle]="isCustomSelected && {'color': '#08E8DE'}">Customs</div>
+    <div class="filters-bar-category__item" (click)="handleSceneSelect()" [ngStyle]="isSceneSelected && {'color': '#08E8DE'}">Scene</div>
+    <div class="filters-bar-category__item" (click)="handleLightSelect()" [ngStyle]="isLightSelected && {'color': '#08E8DE'}">Light</div>
   </div>
-  <div class="select">
+  <div class="select filters-bar-select">
     <select>
       <option>Sort By</option>
       <option>Popular</option>
