@@ -11,6 +11,7 @@ import { FiltersBarComponent } from './components/filters-bar/filters-bar.compon
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { MediaGridComponent } from './components/media-grid/media-grid.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MediaGridComponent } from './components/media-grid/media-grid.component
     FiltersBarComponent,
     ProjectsComponent,
     TagsComponent,
-    MediaGridComponent
+    MediaGridComponent,
+    SearchBarComponent
   ],
   imports: [
     CommonModule,
