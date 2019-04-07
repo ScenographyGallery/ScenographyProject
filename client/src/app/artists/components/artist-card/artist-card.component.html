@@ -1,8 +1,18 @@
 <div 
   class="artist-card"
+  [class.artist-card--visible]="!isBeingHovered"
   [style.backgroundImage]="'url(' + artist.cover + ')'"
+></div>
+
+<div 
+  class="artist-card"
+  [class.artist-card--visible]="isBeingHovered"
+  [style.backgroundImage]="'url(' + artist.avatar + ')'"
+ ></div>
+  
+<div 
+  class="artist-card__name accent-name"
+  [class.artist-card__name--visible]="isBeingHovered"
 >
-  <div class="artist-card__name accent-name">
-    {{ artist.firstName }} {{ artist.lastName }}
-  </div>
+  {{ artist.firstName }} {{ artist.lastName }}
 </div>
