@@ -1,9 +1,10 @@
 <div 
+  *ngFor="let project of gridItems"
   class="grid__item"
-  [style.backgroundImage]="'url(' + item.image + ')'"
-  *ngFor="let item of gridItems"
+  [style.backgroundImage]="'url(' + project.image + ')'"
+  [routerLink]="['/projects', project.id]"
 >
   <div class="grid__item-label">
-    {{ item.name }}
+    {{ project.name }}
   </div>
 </div>

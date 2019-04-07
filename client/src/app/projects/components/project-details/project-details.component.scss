@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  padding-bottom: 2.5rem;
+  padding-top: 5.5rem;
+  background-color: rgb(30, 30, 30);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.project__artist-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ava {
+  margin-right: 10px;
+}
+
+.project__description {
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+
+.project__image {
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+  }
+}
