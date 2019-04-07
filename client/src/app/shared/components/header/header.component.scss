@@ -5,7 +5,21 @@
 }
 
 .navbar-end {
-  padding: 2em 0;
+  padding: 2.5em 0;
+  a{
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+
+  a:hover{
+    color: #08E8DE;
+    background-color: transparent;
+  }
 }
 
 .navbar-item, .navbar-link {
@@ -24,4 +38,6 @@
   img {
     max-height: 6rem;
   }
+
+
 }

@@ -4,13 +4,47 @@
 
 .filters-bar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   input {
     flex-basis: 200px;
   }
 
   *:not(:last-child) {
-    margin-right: 10px;
+    //margin-right: 10px;
+  }
+
+  &-category {
+    display: flex;
+    &__item {
+      color: #fff;
+      margin-right: 3em;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: normal;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+
+  &-select {
+    select {
+      background-color: transparent;
+      color: #Fff;
+      border: none;
+      outline: 0;
+      option {
+        color: #000;
+      }
+    }
+  }
+  .select select.is-active, .select select.is-focused, .select select:active, .select select:focus {
+    box-shadow: none;
+    border-color: transparent;
+  }
+  .select:not(.is-multiple):not(.is-loading)::after {
+    border-color: #08E8DE;
   }
 }
