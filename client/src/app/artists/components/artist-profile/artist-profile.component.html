@@ -1,10 +1,10 @@
-<section *ngIf="artist" class="container">
+<section *ngIf="artist" class="container has-text-white-ter">
   <div class="profile__main-info">
     <div>
       <img class="ava" [src]="artist.avatar" alt="">
     </div>
     <h1>{{ artist.firstName }} {{ artist.lastName }}</h1>
-    <sc-tags [tags]="artist.tags"></sc-tags>
+    <sc-tags class="m-b-2" [tags]="artist.tags"></sc-tags>
     <div>{{ artist.description }}</div>
   </div>
 
