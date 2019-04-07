@@ -10,6 +10,8 @@
     width: 100%;
     position: relative;
     border-radius: 10px;
+    background-size: cover;
+    cursor: pointer;
   }
   
   .grid__item:hover .grid__item-label {
