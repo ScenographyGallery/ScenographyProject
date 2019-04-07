@@ -15,6 +15,9 @@
   position: relative;
   padding-top: 17em;
   margin: 0 auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about-overlay {
@@ -40,11 +43,16 @@ h1 {
   margin-bottom: 37px;
 }
 
-.about__description {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 100px;
-  padding: 100px;
+.about-description {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  p {
+    padding: 3em;
+  }
 }
 
 .about-pointer {
