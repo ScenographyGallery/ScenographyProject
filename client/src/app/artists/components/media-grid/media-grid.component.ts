@@ -1,3 +1,4 @@
+import { Project } from 'src/app/models/project';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./media-grid.component.scss']
 })
 export class MediaGridComponent implements OnInit {
-  @Input() gridItems: { name: string, image: string }[] = [];
+  @Input() gridItems: Project[] = [];
 
   constructor() { }
 
